@@ -1,3 +1,3 @@
-# ingenieriasoft_lab
+# Architecture Doc
 
-Laboratorio de Ingeniería del Software
+Documentation Repository of Software Architecture
