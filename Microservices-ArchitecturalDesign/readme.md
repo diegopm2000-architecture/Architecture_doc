@@ -165,4 +165,65 @@ Detalle
     * Proxy Design Pattern
     * Stateless Service Pattern
 
+### 4.1 Introduction
+
+![Introducción](Introduction-API.png)
+
+### 4.2 Functional Requirements
+
+![Functional Requirements](Functional-Requirements.png)
+
+### 4.3 Architecture Options
+
+![Architecture Options](Architecture-Options.png)
+
+### 4.4 REST Architectural Style
+
+![REST](REST.png)
+
+### 4.5 Applying REST Constraints to Microservices
+
+![REST Constraints](REST-Constraints.png)
+
+### 4.6 RESTful API Example
+
+![REST Example](REST-Example.png)
+
+### 4.7 Pragmatic RESTful microservices
+
+![Pragmatic REST](Pragmatic-REST.png)
+
+### 4.8 API Architectural Patterns
+
+__Facade Design Pattern__
+
+Un ejemplo de facade serían los típicos controllers que sirven para aislar la lógica de negocio del API REST.
+
+![Facade Design Pattern](FacadeDesignPattern.png)
+
+Pasos a seguir
+
+![Facade Design Pattern 2](FacadeDesignPattern2.png)
+
+__Proxy Design Pattern__
+
+![Proxy Design Pattern](ProxyDesignPattern.png)
+
+__Stateless Service Pattern__
+
+![Stateless Design Pattern](StatelessDesignPattern.png)
+
+## 5. How to Compose Microservices
+
+Introduction
+Patterns
+- Broker
+- Aggregate
+- Chained
+- Proxy
+- Branch
+
+
+
+
 
