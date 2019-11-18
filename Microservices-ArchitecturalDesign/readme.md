@@ -223,6 +223,160 @@ Patterns
 - Proxy
 - Branch
 
+### 5.1 Introduction
+
+![Introduction Composing Microservices](Introduction-ComposingMS.png)
+
+### 5.2 Broker Composition Pattern
+
+Aquí la idea básica a tener en cuenta es que una vez lanzado por el API el mensaje hacia el message broker y que sea recogido por este, se devuelve el resultado, sin necesidad de que se procese por los servicios.
+
+Esto permite que la aplicación de frontend no tenga que esperar al procesado.
+
+![Broker Composition Pattern](BrokerCompositionPattern.png)
+
+### 5.3 Aggregate Composition Pattern
+
+En este ejemplo el Aggregator es la Web App, que consume datos de varios servicios para componer el resultado que necesita.
+
+![Aggregate Composition Pattern](AggregateCompositionPattern.png)
+
+
+En este otro ejemplo, tenemos un agregador desacoplado de la Web App. Si el proceso de la agregación de los datos lleva algún tiempo, es preferible utilizar una comunicación asíncrona para llamar al servicio de Agregación y obtener el resultado mediante __callback address pattern__. Esto lo hemos visto en el capítulo de llamadas asíncronas a microservicios.
+
+![Aggregate Composition Pattern 2](AggregatorPattern2.png)
+
+### 5.4 Chained Composition Pattern
+
+Es un patrón muy común. Consiste en que los servicios se van llamando sucesivamente de forma secuencial. Si se encadenan demasiados servicios de forma asíncrona o estos tardan bastante tiempo en responder, puede retrasar demasiado la respuesta. Se recomienda que las cadenas no sean demasiado largas ni lentas. En ese caso, se recomienda usar alguno de los otros patrones que hemos visto para descomponer la composición en cadena y también por supuesto, la comunicación asíncrona.
+
+![Chained Composition Pattern 2](ChainedCompositionPattern.png)
+
+### 5.5 Proxy Composition Pattern
+
+Especialmente útil cuando necesitamos exponer nuestros servicios hacia el exterior. Así sólo exponemos un único servicio.
+
+![Proxy Composition Pattern 2](ProxyCompositionPattern.png)
+
+### 5.6 Branch Composition Pattern
+
+Nos permite ejecutar una o varias tareas en backgroung simultaneamente, cada una de ellas usando un patrón diferente en función de la necesidad. En el ejemplo, el service Two se ejecuta de forma asíncrona, mientras que el Service One A, de forma síncrona.
+
+![Branch Composition Pattern 2](BranchCompositionPattern.png)
+
+## 6. How to Achieve Data Consistency Across Microservices
+
+### 6.1 Summary
+
+- Introduction
+- Options
+- Two Phase Commit
+- Saga Pattern
+- Eventual Consistency
+
+### 6.1 Introduction
+
+Data Consistency: Hay que mantener la consistencia de los datos en caso de que las operaciones se completen de forma correcta o alguna haya fallado.
+
+En una arquitectura tradicional de una aplicación monolítica el mecanismo habitual suele usare el mecanismo de transacciones.
+
+En una arquitectura de microservicios, con una arquitectura distribuida, necesitamos portar este concepto a este nuevo estilo con los datos distribuidos y asociados a distintos microservicios.
+
+![Data Consistency](DataConsistency.png)
+
+### 6.2 Options
+
+Traditional ACID Transactions:
+
+- Atomicity: La transacción se ejecuta de forma completa o no se ejecuta
+- Consistency: La transacción no puede dejar al sistema en un estado intermedio
+- Isolation: La transacción se ejecuta de forma aislada sin tener en cuenta la ejecución simultánea o secuencial de otras transacciones
+- Durability: Una vez ejecutada la transacción, permanece en el sistema.
+
+Two Phase commit pattern
+- ACID
+- CAP Theorem (Choosing Consistency)
+
+Saga Pattern
+- Cambia la atomicidad por la disponibilidad
+
+Eventual consistency pattern
+- Compromete ACID
+- CAP Theorem (Choosing Availability)
+
+![Data Consistency Options](DataConsistencyOptions.png)
+
+### 6.3 Two Phase Commit
+
+![Two Phase Commit](TwoPhaseCommit.png)
+
+Prepare Phase
+
+![Two Phase Commit Prepare Phase](TwoPhaseCommit2.png)
+
+Vote Phase
+
+![Two Phase Commit Vote Phase](TwoPhaseCommit3.png)
+
+Commit Phase
+
+![Two Phase Commit Commit Phase](TwoPhaseCommit4.png)
+
+Inconvenientes
+
+Actualmente se considera un antipatrón porque conlleva problemas de escalado y reduce el rendimiento del sistema.
+
+Si lo usamos, usarlo a pequeña escala. Aunque es mejor recurrir a las alternativas siguientes:
+
+- Saga pattern
+- Eventual Consistency
+
+![Two Phase Commit Caveats](TwoPhaseCommit5.png)
+
+### 6.4 Saga Pattern
+
+![Saga Pattern](SagaPattern.png)
+
+![Saga Pattern 2](SagaPattern2.png)
+
+En este ejemplo Exitoso, podemos apreciar el Saga Log y el SEC (Saga Execution Coordinator)
+
+![Saga Pattern 3](SagaPattern3.png)
+
+Otro ejemplo, en este caso Fallido.
+
+![Saga Pattern 4](SagaPattern4.png)
+
+Implementación
+
+![Saga Pattern 5](SagaPattern5.png)
+
+### 6.5 Eventual Consistency
+
+Está basado en el modelo "BASE", que viene a decir que no tenemos que ejecutar las actualizaciones inmediatamente, sino que se acabarán realizando a lo largo del tiempo.
+
+Promueve la disponibilidad frente a la consistencia del modelo ACID.
+
+Se puede usar la replicación de datos (tradicionalmente se usaba esto) y en microservicios se usa Event Based.
+
+![Eventual Consistency](EventualConsistency.png)
+
+![Eventual Consistency 2](EventualConsistency2.png)
+
+![Eventual Consistency 3](EventualConsistency3.png)
+
+## 7. How to Centralize Access to Microservices using an API Gateway
+
+
+
+
+
+
+
+
+
+
+
 
 
 
