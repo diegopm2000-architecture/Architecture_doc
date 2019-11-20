@@ -462,6 +462,109 @@ Usamos dos bases de datos distintas, una para actualizaciones y otra para consul
 
 ![BrownfieldScenario 6](Selección_059.jpg)
 
+## 9. How to make microservices more resilient
+
+### 9.1 Introduction
+
+- Patterns and approach
+- Design Patterns
+- Approach to Design
+
+![Introduction](Selección_079.png)
+
+![Patterns and approach](Selección_080.png)
+
+### 9.2 Timeouts Design Pattern
+
+![Example of Failure](Selección_081.png)
+
+Consiste en devlver una excepción en caso de que venga el timeout en lugar de quedarse esperando a que responda el servicio que está fallando.
+
+![Timeouts](Selección_082.png)
+
+Se minimiza el riesgo de sobrecargar el servicio, pero no desaparece del todo.
+
+![Timeouts Example](Selección_083.png)
+
+### 9.3 Circuit Breaker Design Pattern
+
+Se usa en adición al timeout. Es similar a abrir un circuito eléctrico. Cuando se detecte un fallo, se previene la llamada al servicio que lo provoca.
+
+El Circuit Breaker monitoriza los fallos que se están produciendo y si supera un umbral, abre el circuito y devuelve un error directamente en lugar de seguir haciendo llamadas.
+
+![Circuit Breaker Design Pattern](Selección_084.png)
+
+![Circuit Breaker Design Pattern Closed State](Selección_085.png)
+
+![Circuit Breaker Design Pattern Closed State With Errors](Selección_086.png)
+
+![Circuit Breaker Design Pattern Closed State With Errors](Selección_087.png)
+
+Hemos llegado al umbral de tolerancia definido y se abre el circuito.
+
+![Circuit Breaker Design Pattern Open State With Errors](Selección_088.png)
+
+Existe otro umbral para poder abrir el circuito
+
+![Circuit Breaker Design Pattern Half-Open State](Selección_089.png)
+
+Se lanza una llamada para ver si va bien, y en ese caso, se vuelve a cerrar
+
+![Circuit Breaker Design Pattern Closed State](Selección_090.png)
+
+![Circuit Breaker Example Handling Failure](Selección_091.png)
+
+![Circuit Breaker Implementation](Selección_092.png)
+
+### 9.4 Retry Design Pattern
+
+![Retry Design Pattern](Selección_093.png)
+
+Tenemos librerías que implementan los tres patrones: timeout, circuit breaker y retry.
+
+### 9.5 Bulkheads Design Pattern
+
+Patrón de alto nivel, es una forma de sellar el fallo, como harían los mamparos de un barco, evitando fallos en cascada.
+
+![Bulkhead Design Pattern](Selección_094.png)
+
+En este caso, tenemos un mismo punto de fallo para una aplicación con demanda normal y otra con mucha demanda
+
+![Bulkhead Design Pattern: Separation by Criticality](Selección_095.png)
+
+Usando este patrón, separamos las aplicaciones mejor, para que en caso de fallo de una, no se vea afectada la otra.
+
+![Bulkhead Design Pattern: Separation by Criticality](Selección_096.png)
+
+Otro ejemplo consiste en aislar los microservicios
+
+![Bulkhead Design Pattern: Isolating Microservices](Selección_097.png)
+
+![Bulkhead Design Pattern: Isolating Microservices](Selección_098.png)
+
+También se puede aplicar la redundancia
+
+Podemos aplicar un balanceador de carga o un message broker
+
+![Bulkhead Design Pattern: Redundancy](Selección_099.png)
+
+### 9.6 Making a Resilient Microservices Architecture
+
+![Resilencia](Selección_100.png)
+
+## 10. Compatibilidad de los servicios hacia atrás
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
