@@ -367,6 +367,104 @@ Se puede usar la replicación de datos (tradicionalmente se usaba esto) y en mic
 
 ## 7. How to Centralize Access to Microservices using an API Gateway
 
+### 7.2 Introduction
+
+- API Gateway
+- Kong API Gateway
+
+![Introduction](ApiGatewayIntroduction.jpg)
+
+Ejemplos sin el uso de Api Gateway
+
+![Api Gateway Example 1](ApiGatewayExample1.jpg)
+
+![Api Gateway Example 2](ApiGatewayExample2.jpg)
+
+Un Api Gateway nos ayuda a reducir enormemente la complejidad de los servicios que son vistos desde fuera tanto por las aplicaciones moviles consumidoras como por clientes externos a nuestros microservicios.
+
+### 7.3 Api GateWay Solution
+
+![Api Gateway Solution](ApiGatewaySolution.jpg)
+
+### 7.4 Api GateWay Example
+
+![Api Gateway Example 3](ApiGatewayExample3.jpg)
+
+### 7.5 Kong Api Gateway
+
+Es un Api Gateway de software libre
+
+![Api Gateway Kong](ApiGatewayKong.jpg)
+
+Tiene varios plugins que podemos aplicar para centralizar la forma de autenticarnos.
+
+Podemos tener blacklist de usuarios, plugins relacionados con el control del tráfico, caché, logging, etc.
+
+También tiene políticas de reintento
+
+Vale mucho la pena echar un vistazo.
+
+## 8. Como descomponer bases de datos monolíticas a lo largo de microservicios
+
+### 8.1 Introduction
+
+![Monolithic Database](MonolithicDatabase.jpg)
+
+### 8.2 Microdatabases
+
+![Microdatabases](Microdatabases.jpg)
+
+### 8.3 Approach to Database Design
+
+![DataFirstVSFunctionFirst](DataFirstVSFunctionFirst.jpg)
+
+![Function First How](FunctionFirstHow.jpg)
+
+### 8.4 Patterns for Database Design
+
+#### 8.4.1 Event Driven
+
+![Event Driven](EventDriven.jpg)
+
+#### 8.4.1 Event Sourcing
+
+![Event Sourcing](EventSourcing.jpg)
+
+Viendo el ejemplo, en el event notification, se pasa solo la modificación realizada, no el estado completo del activo que se ha modificado.
+
+![Event Sourcing 2](EventSourcing2.jpg)
+
+#### 8.4.1 CQRS
+
+Usamos dos bases de datos distintas, una para actualizaciones y otra para consultas. Confiamos esta solución a que nos sirve la consistencia eventual y en la correcta sincronización de las dos bases de datos.
+
+![CQRS](CQRS.jpg)
+
+![CQRSHow](CQRSHow.jpg)
+
+![EventSourcingAndCQRS](EventSourcingAndCQRS.jpg)
+
+### 8.5 Greenfield Database Approach
+
+![GreenfieldDatabaseApproach](GreenfieldDatabaseApproach.jpg)
+
+### 8.6 Brownfield Database Approach
+
+![BrownfieldScenario](BrownfieldScenario.jpg)
+
+![BrownfieldScenario 2](Selección_055.jpg)
+
+![BrownfieldScenario 3](Selección_056.jpg)
+
+![BrownfieldScenario 4](Selección_057.jpg)
+
+![BrownfieldScenario 5](Selección_058.jpg)
+
+![BrownfieldScenario 6](Selección_059.jpg)
+
+
+
+
 
 
 
