@@ -554,6 +554,59 @@ Podemos aplicar un balanceador de carga o un message broker
 
 ## 10. Compatibilidad de los servicios hacia atrás
 
+![Introduction](Selección_060.jpg)
+
+![Backwards Compatibility](Selección_061.jpg)
+
+![Backwards Compatibility Issues](Selección_062.jpg)
+
+![Backwards Compatibility: How?](Selección_063.jpg)
+
+![Awareness of Compatibility](Selección_064.jpg)
+
+### 10.1 Compatible Changes
+
+![Compatible Changes](Selección_065.jpg)
+
+![Contract Consistency](Selección_066.jpg)
+
+### 10.2 Adaptor Design Pattern
+
+![Adaptor Design Pattern](Selección_067.jpg)
+
+![Unit Test Models and Adaptors](Selección_068.jpg)
+
+### 10.3 Testing Compatibility
+
+![Automation](Selección_069.jpg)
+
+![Contract Testing High Level](Selección_070.jpg)
+
+### 10.4 Versioning Strategies
+
+![Versioning Strategy](Selección_071.jpg)
+
+![HTTP Headers](Selección_072.jpg)
+
+![Request Path](Selección_073.jpg)
+
+### 10.5 Como definir y documentar microservicios
+
+![Microservices Contract](Selección_074.jpg)
+
+![Consumer Driven Contract Design](Selección_075.jpg)
+
+![Resource Based Microservice](Selección_076.jpg)
+
+
+
+
+
+
+
+
+
+
 
 
 
