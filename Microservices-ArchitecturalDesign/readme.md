@@ -590,13 +590,95 @@ Podemos aplicar un balanceador de carga o un message broker
 
 ![Request Path](Selección_073.jpg)
 
-### 10.5 Como definir y documentar microservicios
+## 11 Como definir y documentar microservicios
 
 ![Microservices Contract](Selección_074.jpg)
 
 ![Consumer Driven Contract Design](Selección_075.jpg)
 
 ![Resource Based Microservice](Selección_076.jpg)
+
+![Action Based Microservice](Selección_078.jpg)
+
+![Task Based Microservice](Selección_079.jpg)
+
+![Interface Definition Languages](Selección_080.jpg)
+
+Swagger (Open API) es una de las mejores formas de documentar nuestras APIS, a la vez que ofrecemos un enfoque Api FIRST par la definición de los contratos de nuestros servicios.
+
+## 12. Como implementar un logging centralizado en nuestros microservicios
+
+### 12.1 Introduction
+
+- Centralized Logging
+- Consistent Logging Format
+- Logging Levels
+- Transaction Transparency
+- Centralized Logging Demo
+
+### 12.2 Centralized Logging
+
+![Centralized Logging](Selección_081.jpg)
+
+![Centralized Logging 2](Selección_082.jpg)
+
+![Consistent Logging Format](Selección_083.jpg)
+
+![Logging Levels](Selección_084.jpg)
+
+![Transaction Transparency](Selección_085.jpg)
+
+Como ejemplo se usa Elastic Search and Kibana con logstash a modo de log centralizado.
+
+## 13.Como proporcionar Informes de los datos en microservicios
+
+![Introduction](Selección_086.jpg)
+
+Tenemos api de reporting a modo de batch para ir construyendo los informes. Además, así no mezclamos con la operativa principal. Para evitar el antipatrón de tener una misma base de datos, se puede usar CQRS con una copia de los datos.
+
+Esta aproximación es válida para pequeños reportes y pequeñas cantidades de datos.
+
+Se puede mejorar el rendimiento añadiendo una base de datos para el Reporting Service Tool
+
+![Reporting Service Calls](Selección_087.jpg)
+
+Usando Data Push Application, transformamos los datos en otro formato más conveniente hacia una base de datos que será consumida por la aplicación de Reportes. La desventaja es que ahora tenemos otra aplicación más y acoplada a una base de datos central de la que tiran varios servicios.
+
+Se puede mejorar usando CQRS o bien asesgurar que el equipo del API y de la aplicación de Push está gestionada y mantenida por el mismo equipo de desarrollo.
+
+![Data Push Application](Selección_089.jpg)
+
+![Reporting Event Subscribers](Selección_090.jpg)
+
+![Reporting Event via Gateway](Selección_091.jpg)
+
+Esta aproximacion es barata y totalmente desacoplada del funcionamiento de la aplicación.
+
+![Using Backup imports for Reporting](Selección_092.jpg)
+
+![ETL and Data-Warehouses](Selección_093.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
