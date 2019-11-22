@@ -658,6 +658,8 @@ Esta aproximacion es barata y totalmente desacoplada del funcionamiento de la ap
 
 ![ETL and Data-Warehouses](Selección_093.jpg)
 
+## 14. Como automatizar microservicos on-promise (sistemas in-house)
+
 
 
 
