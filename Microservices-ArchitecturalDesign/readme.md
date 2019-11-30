@@ -660,6 +660,118 @@ Esta aproximacion es barata y totalmente desacoplada del funcionamiento de la ap
 
 ## 14. Como automatizar microservicos on-promise (sistemas in-house)
 
+![Introduction](Selección_101.png)
+
+![Continuous Integration Tool](Selección_102.png)
+
+![Continuous Integration Tool Process](Selección_103.png)
+
+![Continuous Delivery](Selección_104.png)
+
+![Continuous Delivery Tool Process](Selección_105.png)
+
+![Automation High-level](Selección_106.png)
+
+![Automation Tools Summary](Selección_107.png)
+
+## 15. How to approach Cloud Based Microservices Infrastructure
+
+![Introduction](Selección_108.png)
+
+![IAAS](Selección_109.png)
+
+![PASS](Selección_110.png)
+
+![SASS](Selección_111.png)
+
+![Hybrid Approach](Selección_112.png)
+
+![Hybrid Cloud Based Architecture](Selección_113.png)
+
+![Cloud Automation Hight-Level](Selección_114.png)
+
+## 16. How to Manage Microservices Configuration
+
+![Introduction](Selección_115.png)
+
+![Solutions](Selección_116.png)
+
+Servidores de despliegue que sustituyen la configuración de los microservicios por una específica en función del entorno en donde se despliegan.
+
+![Deployment Servers](Selección_117.png)
+
+El patrón de configuración externalizada consiste en tener un almacen de configuración accedido a través de un API.
+Nos proporciona el Zero downtime para cambios de configuración.
+
+![Externalized Configuration Pattern](Selección_118.png)
+
+![Externalized Configuration Pattern 2](Selección_119.png)
+
+![Configuration Management Tools](Selección_120.png)
+
+Un buen ejemplo de una herramienta de configuración sería Chef.
+
+![Chef Overwiew](Selección_122.png)
+
+Otra sería Puppet
+
+![Puppet Overwiew](Selección_121.png)
+
+Y hay bastantes más
+
+![Many More](Selección_123.png)
+
+Otra tecnología son los contenedores
+
+![Containers](Selección_124.png)
+
+![Containers 2](Selección_125.png)
+
+## 17. How to Managed Microservices Registration and Discovery
+
+![Introduction](Selección_126.png)
+
+![Microservices Architecture](Selección_127.png)
+
+![Client Side Discovery](Selección_128.png)
+
+![Client Side Discovery 2](Selección_129.png)
+
+![Server Side Discovery](Selección_130.png)
+
+![Server Side Discovery](Selección_131.png)
+
+![Service Registration Pattern](Selección_132.png)
+
+![Third-Party Registration Pattern](Selección_133.png)
+
+![Registration and Discovery Tools](Selección_134.png)
+
+![Orchestration Engine and Containers](Selección_135.png)
+
+## 18. How to Monitor Microservices
+
+![Microservices Monitoring](Selección_136.png)
+
+![Monitor Key Metrics](Selección_137.png)
+
+![Monitor SLA Metrics](Selección_138.png)
+
+![Monitor Dashboards](Selección_139.png)
+
+![Alerting and Monitoring](Selección_140.png)
+
+![Defining Thresholds for Alerts](Selección_141.png)
+
+![Monitoring Tools](Selección_142.png)
+
+![Microservices Monitoring Patterns](Selección_143.png)
+
+
+
+
+
+
 
 
 
